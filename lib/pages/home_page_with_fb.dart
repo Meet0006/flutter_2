@@ -10,7 +10,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  var myText = "Change Me";
   var data;
 
   @override
@@ -21,7 +20,7 @@ class _HomePageState extends State<HomePage> {
 
   getData() async {
     var res = await http.get(Uri.parse(
-        "https://www.json-generator.com/api/json/get/ceLPZGSzyq?indent=2"));
+        "http://www.json-generator.com/api/json/get/ceLPZGSzyq?indent=2"));
     data = jsonDecode(res.body);
     print(data);
     setState(() {});
@@ -30,11 +29,10 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey[100],
+      backgroundColor: Colors.green,
       appBar: AppBar(
+        shadowColor: Colors.black,
         title: Text("MeeT's Project"),
-        backgroundColor: Colors.red,
-        shadowColor: Colors.green,
         actions: [
           IconButton(
             icon: Icon(Icons.login),
@@ -42,7 +40,7 @@ class _HomePageState extends State<HomePage> {
               Constants.prefs.setBool("loggin", false);
               Navigator.pushReplacementNamed(context, "/login");
             },
-          ),
+          )
         ],
       ),
       body: Padding(
@@ -75,7 +73,7 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           //myText = _nameController.text;
-          setState(() {});
+          //setState(() {});
         },
         child: Icon(Icons.refresh),
       ),

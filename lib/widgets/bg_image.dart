@@ -10,6 +10,8 @@ class BgImage extends StatelessWidget {
       height: 250,
       width: 250,
       fit: BoxFit.cover,
+      color: Colors.black.withOpacity(0.6),
+         colorBlendMode: BlendMode.darken,
       // width: 150,
     );
   }
