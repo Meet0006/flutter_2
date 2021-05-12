@@ -30,14 +30,19 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey[100],
+      backgroundColor: Colors.blueGrey[400],
       appBar: AppBar(
-        title: Text("MeeT's Project"),
-        backgroundColor: Colors.red,
-        shadowColor: Colors.green,
+        title: Text(
+          "MeeT's Project",
+        ),
+        backgroundColor: Colors.blueGrey,
+        shadowColor: Colors.black,
         actions: [
           IconButton(
-            icon: Icon(Icons.login),
+            icon: Icon(
+              Icons.login,
+              color: Colors.black,
+            ),
             onPressed: () {
               Constants.prefs.setBool("loggin", false);
               Navigator.pushReplacementNamed(context, "/login");
@@ -77,7 +82,11 @@ class _HomePageState extends State<HomePage> {
           //myText = _nameController.text;
           setState(() {});
         },
-        child: Icon(Icons.refresh),
+        child: Icon(
+          Icons.refresh,
+          color: Colors.black,
+        ),
+        hoverColor: Colors.black,
       ),
     );
   }

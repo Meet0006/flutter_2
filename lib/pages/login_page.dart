@@ -1,5 +1,3 @@
-//import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_2/widgets/bg_image.dart';
 import 'package:flutter_2/utils/Constants.dart';
@@ -52,7 +50,7 @@ class _LoginPageState extends State<LoginPage> {
                                   labelText: "Password",
                                   hoverColor: Colors.red,
                                 ),
-                              )
+                              ),
                             ],
                           ),
                         )),

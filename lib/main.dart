@@ -10,14 +10,14 @@ Future main() async {
   Constants.prefs = await SharedPreferences.getInstance();
   runApp(
     MaterialApp(
-      title: "Flutter New App", 
-      
+      title: "Flutter New App",
       debugShowCheckedModeBanner: false,
       home: Constants.prefs.getBool("login in") == true
           ? HomePage()
           : LoginPage(),
       theme: ThemeData(
-        accentColor: Colors.indigo,
+        fontFamily: 'Itim',
+        accentColor: Colors.lightGreen[300],
       ),
       routes: {
         "/login": (context) => LoginPage(),
